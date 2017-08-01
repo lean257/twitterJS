@@ -9,7 +9,7 @@ const socketio = require('socket.io');
 var server = app.listen(3000);
 var io = socketio.listen(server);
 
-app.use('/', routes);
+app.use('/', routes(io));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
