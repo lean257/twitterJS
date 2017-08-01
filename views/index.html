@@ -7,16 +7,22 @@
   </div>
 
   {% if showForm %}
+
   <form action="/tweets" method="POST">
     <label for="name_field">Name:</label>
-    <input name="name" type="text" id="name_field" />
-
+    {% for tweet in tweets %}
+    {% if showName %}
+    <input name="name" type="text" id="name_field" value={{tweet.name}}/>
+    {% endif %}
+    {% endfor %}
+    {% if HomePage %}
+    <input name="name" type="text" id="name_field"/>
+    {% endif %}
     <label for="text_field">Text:</label>
     <input name="text" type="text" id="text_field" style="width: 350px;" />
-
     <input type="submit" value="Submit" />
   </form>
-{% endif %}
+  {% endif %}
 
   <div class="row">
     <div class="col-md-3">
@@ -36,4 +42,3 @@
   </div>
 
 {% endblock %}
-
