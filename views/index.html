@@ -11,11 +11,12 @@
       <b>Your Name</b><br>
       100 followers
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 container">
 
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.content}}</li>
+       <div class='content by tweetbox'><img src="http://lorempixel.com/48/48"> {{tweet.name}}</div>
+        <div  class='tweetbox content'>{{tweet.content}}</div>
       {% endfor %}
 
     </div>

@@ -52,8 +52,10 @@ code {
   content:url("http://lorempixel.com/48/48");
 }
 .content {
-  margin-left: 60px;
+  margin-left: 100px;
+  color: #00aced;
 }
-.content .by {
+.by {
   font-weight: bold;
+  color: #00aced;
 }
