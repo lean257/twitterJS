@@ -93,10 +93,8 @@
     socket.on('newTweet', function (tweet) {
       console.log('we got the tweet',tweet);
       // alert('Refreshing... check the console...');
-      var parent = $("#parent");
-      // var newTweet = document.createElement("div");
-      $("#parent").append('<div class="content by"><img src="http://lorempixel.com/48/48"><a href="/users/{{tweet.name}}">'+tweet.name+'</div>');
-      $("#parent").append('<div class="content"><a href="/tweets/{{tweet.id}}">'+tweet.text+'</div>');
+      $("#parent").append('<div class="content by"><img src="http://lorempixel.com/48/48"><a href="/users/{{tweet.name}}">{{tweet.name}}</div>');
+      $("#parent").append('<div class="content"><a href="/tweets/{{tweet.id}}"{{tweet.text}}</div>');
     });
   </script>
 </html>
