@@ -9,12 +9,11 @@
   {% if showForm %}
 
   <form action="/tweets" method="POST">
-    <label for="name_field">Name:</label>
-    {% for tweet in tweets %}
     {% if showName %}
-    <input name="name" type="text" id="name_field" value={{tweet.name}}/>
+    <label for="name_field">Name:</label>
+    <input name="name" type="text" id="name_field" value={{name}}/>
     {% endif %}
-    {% endfor %}
+
     {% if HomePage %}
     <input name="name" type="text" id="name_field"/>
     {% endif %}
