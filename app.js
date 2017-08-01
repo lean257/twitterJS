@@ -3,9 +3,11 @@ const app = express();
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 const routes = require('./routes');
+const bodyParser = require('body-parser');
 
 app.use('/', routes);
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(function (req, res, next) {
   morgan(':id :method :url :response-time');
